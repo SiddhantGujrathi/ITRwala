@@ -54,12 +54,25 @@ app.get('/public-company', (req, res) => {
 });
 
 // Income Tax Routes
-app.get('/income-tax/itr-filing', (req, res) => {
-    res.render('IncomeTax/itr-filing');
+app.get('/business', (req, res) => {
+    res.render('IncomeTax/business');
 });
 
-app.get('/income-tax/tax-planning', (req, res) => {
-    res.render('IncomeTax/tax-planning');
+app.get('/capital_gain', (req, res) => {
+    res.render('IncomeTax/capital_gain');
+});
+
+app.get('/other_income', (req, res) => {
+    res.render('IncomeTax/other_income');
+});
+
+
+app.get('/rental_income', (req, res) => {
+    res.render('IncomeTax/rental_income');
+});
+
+app.get('/salary', (req, res) => {
+    res.render('IncomeTax/salary');
 });
 
 // GST Routes
