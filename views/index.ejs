@@ -1,109 +1,114 @@
 <%- include('layouts/header') %>
 
-<style>
-    /* Custom Styling */
-    .nav-pills .nav-link {
-        font-weight: bold;
-        color: black;
-    }
+    <style>
+        /* Custom Styling */
+        .nav-pills .nav-link {
+            font-weight: bold;
+            color: black;
+        }
 
-    .nav-pills .nav-link.active {
-        border-bottom: 2px solid #004cd2;
-        color: #004cd2 !important;
-        background: none;
-    }
+        .nav-pills .nav-link.active {
+            border-bottom: 2px solid #004cd2;
+            color: #004cd2 !important;
+            background: none;
+        }
 
-    .service-card {
-        transition: transform 0.3s ease-in-out;
-    }
+        .service-card {
+            transition: transform 0.3s ease-in-out;
+        }
 
-    .service-card:hover {
-        transform: translateY(-5px);
-    }
-</style>
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
 
 
-<div class="hero-section text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-7 ">
-                <h1 class="display-4 mb-4">Start Your Business Journey Today</h1>
-                <p class="lead mb-4">Professional Business Registration & Compliance Services</p>
-            </div>
-            <div class="col-md-5 desktop-form">
-                <div class="card shadow">
-                    <div class="card-body">
-                        <h3 class="card-title text-center mb-4">Get Started Now</h3>
-                        <form id="enquiryForm">
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Your Name" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Email Address" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="tel" class="form-control" placeholder="Phone Number" required>
-                            </div>
-                            <div class="mb-3">
-                                <select class="form-select" required>
-                                    <option value="">Select Service</option>
-                                    <option value="private-limited">Private Limited Company</option>
-                                    <option value="llp">LLP Registration</option>
-                                    <option value="opc">One Person Company</option>
-                                    <option value="partnership">Partnership Firm</option>
-                                </select>
-                            </div>
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-warning btn-lg">Get Free Consultation</button>
-                            </div>
-                        </form>
+    <div class="hero-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 ">
+                    <h1 class="display-4 mb-4">Start Your Business Journey Today</h1>
+                    <p class="lead mb-4">Professional Business Registration & Compliance Services</p>
+                </div>
+                <div class="col-md-5 desktop-form">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h3 class="card-title text-center mb-4">Get Started Now</h3>
+                            <form id="enquiryForm">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Email Address" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control" placeholder="Phone Number" required>
+                                </div>
+                                <div class="mb-3">
+                                    <select class="form-select" required>
+                                        <option value="">Select Service</option>
+                                        <option value="private-limited">Private Limited Company</option>
+                                        <option value="llp">LLP Registration</option>
+                                        <option value="opc">One Person Company</option>
+                                        <option value="partnership">Partnership Firm</option>
+                                    </select>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-warning btn-lg">Get Free Consultation</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Sticky Form for Mobile -->
-<div class="sticky-form-mobile">
-    <form id="mobileEnquiryForm" class="row g-2">
-        <div class="col-6">
-            <input type="text" class="form-control form-control-sm" placeholder="Your Name" required>
-        </div>
-        <div class="col-6">
-            <input type="tel" class="form-control form-control-sm" placeholder="Phone Number" required>
-        </div>
-        <div class="col-12">
-            <button type="submit" class="btn btn-warning btn-sm w-100">Get Free Consultation</button>
-        </div>
-    </form>
-</div>
-<div class="container my-5" id="services">
-    <!-- <h2 class="text-center mb-5">Our Services</h2> -->
-    <h2 class="text-center fw-bold">Our Services</h2>
-    <div class="underline bg-warning mx-auto" style="width: 80px; height: 3px;"></div>
-
-    <div class="container mt-4">
-        <!-- Navigation Tabs -->
-        <ul class="nav nav-pills justify-content-center d-flex flex-wrap mb-4" id="serviceTabs" role="tablist">
-            <li class="nav-item text-center">
-                <button class="nav-link active" id="incorporation-tab" data-bs-toggle="pill" data-bs-target="#incorporation" type="button" role="tab">STARTUP INCORPORATION</button>
-            </li>
-            <li class="nav-item text-center">
-                <button class="nav-link" id="trademark-tab" data-bs-toggle="pill" data-bs-target="#trademark" type="button" role="tab">TRADEMARK & IPR SERVICES</button>
-            </li>
-            <li class="nav-item text-center">
-                <button class="nav-link" id="roc-tab" data-bs-toggle="pill" data-bs-target="#roc" type="button" role="tab">ROC FILING</button>
-            </li>
-            <li class="nav-item text-center">
-                <button class="nav-link" id="gst-tab" data-bs-toggle="pill" data-bs-target="#gst" type="button" role="tab">GST FILINGS</button>
-            </li>
-            <li class="nav-item text-center">
-                <button class="nav-link" id="iso-tab" data-bs-toggle="pill" data-bs-target="#iso" type="button" role="tab">STARTUP INDIA, ISO & MSME</button>
-            </li>
-        </ul>
+    <!-- Sticky Form for Mobile -->
+    <div class="sticky-form-mobile">
+        <form id="mobileEnquiryForm" class="row g-2">
+            <div class="col-6">
+                <input type="text" class="form-control form-control-sm" placeholder="Your Name" required>
+            </div>
+            <div class="col-6">
+                <input type="tel" class="form-control form-control-sm" placeholder="Phone Number" required>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-warning btn-sm w-100">Get Free Consultation</button>
+            </div>
+        </form>
     </div>
-    
+    <div class="container my-5" id="services">
+        <!-- <h2 class="text-center mb-5">Our Services</h2> -->
+        <h2 class="text-center fw-bold">Our Services</h2>
+        <div class="underline bg-warning mx-auto" style="width: 80px; height: 3px;"></div>
+
+        <div class="container mt-4">
+            <!-- Navigation Tabs -->
+            <ul class="nav nav-pills justify-content-center d-flex flex-wrap mb-4" id="serviceTabs" role="tablist">
+                <li class="nav-item text-center">
+                    <button class="nav-link active" id="incorporation-tab" data-bs-toggle="pill"
+                        data-bs-target="#incorporation" type="button" role="tab">STARTUP INCORPORATION</button>
+                </li>
+                <li class="nav-item text-center">
+                    <button class="nav-link" id="trademark-tab" data-bs-toggle="pill" data-bs-target="#trademark"
+                        type="button" role="tab">TRADEMARK & IPR SERVICES</button>
+                </li>
+                <li class="nav-item text-center">
+                    <button class="nav-link" id="roc-tab" data-bs-toggle="pill" data-bs-target="#roc" type="button"
+                        role="tab">ROC FILING</button>
+                </li>
+                <li class="nav-item text-center">
+                    <button class="nav-link" id="gst-tab" data-bs-toggle="pill" data-bs-target="#gst" type="button"
+                        role="tab">GST FILINGS</button>
+                </li>
+                <li class="nav-item text-center">
+                    <button class="nav-link" id="iso-tab" data-bs-toggle="pill" data-bs-target="#iso" type="button"
+                        role="tab">STARTUP INDIA, ISO & MSME</button>
+                </li>
+            </ul>
+        </div>
+
 
         <!-- Tab Content -->
         <div class="tab-content" id="serviceContent">
@@ -112,7 +117,11 @@
                 <div class="row justify-content-center">
                     <div class="col-md-3">
                         <div class="card service-card p-3 shadow mb-4">
-                            <h5 class="text-primary">Private Limited</h5>
+                            <div class="d-flex align-items-center">
+                                <img src="/images/private.png" alt="Private Limited Icon" class="me-2" width="30"
+                                    height="30">
+                                <h5 class="text-primary">Private Limited</h5>
+                            </div>
                             <p>Register a Pvt Ltd Company with ease.</p>
                             <div class="gap-2">
                                 <a href="/private-limited" class="btn btn-outline-primary">Get Started</a>
@@ -228,28 +237,28 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
 
 
-<div class="bg-light py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h2>Why Choose ITRwala?</h2>
-                <ul class="feature-list list-unstyled">
-                    <li>Expert Guidance from Chartered Accountants</li>
-                    <li>End-to-End Support with Dedicated Manager</li>
-                    <li>Competitive Pricing with No Hidden Costs</li>
-                    <li>Quick Turnaround Time</li>
-                    <li>100% Online Process</li>
-                </ul>
-                <a href="#contact" class="btn btn-warning cta-button mt-3">Contact Us</a>
-            </div>
-            <div class="col-md-6">
-                <img src="/images/why_to_choose.png" alt="Why Choose Us" class="img-fluid">
+    <div class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Why Choose ITRwala?</h2>
+                    <ul class="feature-list list-unstyled">
+                        <li>Expert Guidance from Chartered Accountants</li>
+                        <li>End-to-End Support with Dedicated Manager</li>
+                        <li>Competitive Pricing with No Hidden Costs</li>
+                        <li>Quick Turnaround Time</li>
+                        <li>100% Online Process</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-warning cta-button mt-3">Contact Us</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="/images/why_to_choose.png" alt="Why Choose Us" class="img-fluid">
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<%- include('layouts/footer') %>
+    <%- include('layouts/footer') %>
